@@ -37,6 +37,8 @@ python3 train_rnn.py -gpus 0 -config config/config_$dataset.yaml
 python3 train_rnn.py -gpus 0 -config config/config_$dataset.yaml -restore $expdir/best_in_train_micro_f1_checkpoint.pt -notrain
 ```
 
-Hyperparameters can be modified in config/config_$dataset.yaml
+5. Hyperparameters can be modified in config/config_$dataset.yaml.
+
+6. Logs can be found in exp directory.
 
 
