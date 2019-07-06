@@ -17,7 +17,7 @@
   
   - Reuters: Run data/preprocess_reuters.py
   
-  - Move data to data/$dataset, which contains text_train,label_train.....
+  - Move data to data/$dataset, which is a directory contains text_train, label_train.....
 
 2. Preprocess data:
 
