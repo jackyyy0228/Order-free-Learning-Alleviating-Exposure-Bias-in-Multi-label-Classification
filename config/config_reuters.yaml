@@ -1,0 +1,47 @@
+data: 'data/reuters/save_data'
+epoch: 500
+train_batch_size: 128
+test_batch_size: 32
+label_order: 'index'  # index, freq_first, rare_first
+log: './exp/reuters/ocd'
+#Optimizer
+param_init: 0.1
+optim: 'adam'
+learning_rate: 0.0005
+max_grad_norm: 10
+learning_rate_decay: 0.99
+schedule: False
+start_decay_at: 150
+# RNN configuration
+emb_size: 512
+load_emb: False
+emb_path: 'data/reuters/embedding.pt'
+hidden_size: 256
+encoder_n_layers: 2
+decoder_n_layers: 2
+input_dropout_p: 0.5
+dropout_p: 0.5
+bidirectional: True
+# Training
+teacher_forcing_ratio_start: 1.0
+teacher_forcing_ratio_end: 1.0
+teacher_forcing_final_epoch: 400
+#Logistici
+decoder_fc_layers: [512,512,512]
+logistic_joint_decoding: False
+logistic_weight: 0
+#decoder
+max_tgt_len: 25
+loss_type: 'ocd' # vallina OCD order_free
+decoder_sampling_type: 'sample' # max or sample or order_free
+beam_size: 6
+beam_score_type: 'sum' # sum or mean
+# Loss
+add_mask: True
+OCD_temperature_start: 1e-7 #0.5
+OCD_temperature_end: 1e-7
+OCD_final_hard_epoch: 5
+#Evaluation
+eval_interval: 1000
+print_interval: 200
+eval_metrics_split_labels: False
