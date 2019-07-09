@@ -55,64 +55,63 @@
 	python3 train_rnn.py -gpus 0 -config config/config_$dataset.yaml -restore $expdir/best_in_train_micro_f1_checkpoint.pt -notrain
 	```
 
+
 ## Files and directories
 
-**models** : codes for model structure 
+`models` : codes for model structure
 
-**metrics.py** : metrics for multi-label classification
+`metrics.py` : metrics for multi-label classification
 
-**optims.py** : code for optimizer and defining gradient clipping.
+`optims.py` : code for optimizer and defining gradient clipping.
 
-**preprocess.py** : code for preprocessing
+`preprocess.py` : code for preprocessing
 
-	
 ## Hyperparameters
 
-**data**:  The path of file, save_data. e.g. './data/AAPD/save_data'
+`data`:  The path of file, save_data. e.g. './data/AAPD/save_data'
 
-**epoch**: Number  of epoch for training.
+`epoch`: Number  of epoch for training.
 
-**train_batch_size**: Batch size for training.
+`train_batch_size`: Batch size for training.
 
-**test_batch_size**: Batch size for testing for beam search.
+`test_batch_size`: Batch size for testing for beam search.
 
-**log**:  Directory for log files. e.g. './exp/aapd/ocd'
+`log`:  Directory for log files. e.g. './exp/aapd/ocd'
 
-**emb_size**: Size of word embedding.
+`emb_size`: Size of word embedding.
 
-**load_emb**: Load pretrained word vectors. (We set false for random initialization)
+`load_emb`: Load pretrained word vectors. (We set false for random initialization)
 
-**emb_path**: Path of pretrained word embedding. (if load_emb is true)
+`emb_path`: Path of pretrained word embedding. (if load_emb is true)
 
-**hidden_size**: Hidden size for LSTM cell.
+`hidden_size`: Hidden size for LSTM cell.
 
-**encoder_n_layers**: Number of layers for LSTM encoder.
+`encoder_n_layers`: Number of layers for LSTM encoder.
 
-**decoder_n_layers**: Number of layers for LSTM decoder.
+`decoder_n_layers`: Number of layers for LSTM decoder.
 
-**input_dropout_p**: Probability of dropout for input of encoder.
+`input_dropout_p`: Probability of dropout for input of encoder.
 
-**dropout_p**: Probability of dropout for RNN encoder and decoder.
+`dropout_p`: Probability of dropout for RNN encoder and decoder.
 
-**bidirectional**: BLSTM or not.
+`bidirectional`: BLSTM or not.
 
-**logistic_weight**: weight of loss between BR decoder and RNN decoder.
+`logistic_weight`: weight of loss between BR decoder and RNN decoder.
 
-**max_tgt_len**: maximun number of decoding steps.
+`max_tgt_len`: maximun number of decoding steps.
 
-**loss_type**: vallina, OCD  ,or order_free
+`loss_type`: vallina, OCD  ,or order_free
 
-**beam_size**: beam size for decoding
+`beam_size`: beam size for decoding
 
-**add_mask**: mask to prevent rnn decoder generate same labels.
+`add_mask`: mask to prevent rnn decoder generate same labels.
 
-**OCD_temperature_start**: Start temperature for OCD.
+`OCD_temperature_start`: Start temperature for OCD.
 
-**OCD_temperature_end**: End temperature for OCD.
+`OCD_temperature_end`: End temperature for OCD.
 
-**OCD_final_hard_epoch**: Number of epoches for ocd temperature to reach OCD_temperature_end (Linear decay).
+`OCD_final_hard_epoch`: Number of epoches for ocd temperature to reach OCD_temperature_end (Linear decay).
 
-**eval_interval**: Number of updates to check the performance in validation set.
+`eval_interval`: Number of updates to check the performance in validation set.
 
-**print_interval**: Number of updates to print the current average loss.
-
+`print_interval`: Number of updates to print the current average loss.
