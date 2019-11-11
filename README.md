@@ -115,3 +115,14 @@
 `eval_interval`: Number of updates to check the performance in validation set.
 
 `print_interval`: Number of updates to print the current average loss.
+
+### Citation
+
+```
+@article{tsai2019order,
+  title={Order-free Learning Alleviating Exposure Bias in Multi-label Classification},
+  author={Tsai, Che-Ping and Lee, Hung-Yi},
+  journal={arXiv preprint arXiv:1909.03434},
+  year={2019}
+}
+```
