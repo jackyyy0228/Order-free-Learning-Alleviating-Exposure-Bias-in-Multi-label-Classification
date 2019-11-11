@@ -1,7 +1,7 @@
 # Order-free Learning Alleviating Exposure Bias in Multi-label Classification
 Implementation of "Order-free Learning Alleviating Exposure Bias in Multi-label Classification". 
 
-Feel free to use/modify them, any bug report or improvement suggestion will be appreciated. If you find this project helpful for your research, please do consider to cite our paper](#Citation), thanks!
+Feel free to use/modify them, any bug report or improvement suggestion will be appreciated. If you find this project helpful for your research, please do consider to cite [our paper](#Citation), thanks!
 
 ## Prerequisites
 
